@@ -1,0 +1,71 @@
+{
+  "name": "ELT_Backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "scripts": {
+    "build": "babel lib -d dist",
+    "dev": "nodemon lib/index.js --exec babel-node --presets babel-preset-env",
+    "start": "npm run build && node ./dist/index.js",
+    "lint": "eslint .",
+    "format": "eslint . --fix",
+    "flow": "flow",
+    "flow-check": "flow check --show-all-errors",
+    "precommit": "lint-staged"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "apollo-server": "^2.9.16",
+    "apollo-server-express": "^2.9.16",
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "graphql": "^14.5.8",
+    "graphql-fields": "^2.0.3",
+    "graphql-type-json": "^0.3.1",
+    "mime-types": "^2.1.26",
+    "moment": "^2.24.0",
+    "moment-timezone": "^0.5.27",
+    "mongoose": "^5.8.9",
+    "mongoose-url-slugs": "^1.0.2",
+    "nodemailer": "^6.4.2"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-eslint": "^10.0.3",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-stage-2": "^6.24.1",
+    "eslint": "^6.1.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-config-node": "^4.0.0",
+    "eslint-config-prettier": "^6.9.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-node": "^11.0.0",
+    "eslint-plugin-prettier": "^3.1.2",
+    "husky": "^4.0.10",
+    "lint-staged": "^8.1.5",
+    "nodemon": "^2.0.2",
+    "prettier": "^1.19.1"
+  },
+  "lint-staged": {
+    "linters": {
+      "*.js": [
+        "prettier --parser flow --write",
+        "eslint --fix",
+        "git add"
+      ]
+    },
+    "ignore": [
+      "**/dist/*.js"
+    ]
+  }
+}
