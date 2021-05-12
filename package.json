@@ -36,7 +36,7 @@
     "moment-timezone": "^0.5.27",
     "mongoose": "^5.8.9",
     "mongoose-url-slugs": "^1.0.2",
-    "nodemailer": "^6.4.2"
+    "nodemailer": "^6.4.16"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
