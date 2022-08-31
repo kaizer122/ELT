@@ -33,7 +33,7 @@
     "graphql-type-json": "^0.3.1",
     "mime-types": "^2.1.26",
     "moment": "^2.24.0",
-    "moment-timezone": "^0.5.27",
+    "moment-timezone": "^0.5.35",
     "mongoose": "^5.8.9",
     "mongoose-url-slugs": "^1.0.2",
     "nodemailer": "^6.4.2"
